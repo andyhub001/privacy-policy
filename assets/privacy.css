@@ -148,6 +148,12 @@ h1 {
   line-height: 1.5;
 }
 
+.policy-section h3 {
+  margin: 22px 0 6px;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
 .policy-section p,
 .policy-section ul {
   margin: 8px 0 0;
@@ -164,45 +170,66 @@ h1 {
   box-shadow: 0 0 0 3px #fff1cd;
 }
 
-.policy-index {
+.app-index {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
   margin-top: 30px;
 }
 
-.policy-card {
+.app-card {
   display: block;
-  min-height: 150px;
+  min-height: 190px;
   padding: 22px;
   border: 1px solid var(--line);
   color: var(--ink);
   background: var(--paper);
-  text-decoration: none;
 }
 
-.policy-card:hover,
-.policy-card:focus-visible {
+.app-card:hover {
   border-color: #d88ca5;
-  outline: 2px solid transparent;
   box-shadow: 0 8px 24px rgba(81, 53, 63, 0.08);
 }
 
-.policy-card__category {
+.app-card__category {
   color: var(--accent);
   font-size: 13px;
   font-weight: 700;
 }
 
-.policy-card h2 {
+.app-card h2 {
   margin: 10px 0 5px;
   font-size: 20px;
 }
 
-.policy-card p {
+.app-card p {
   margin: 0;
   color: var(--muted);
   font-size: 14px;
+}
+
+.app-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.app-card__links a {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  padding: 7px 14px;
+  border: 1px solid #d88ca5;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.app-card__links a:hover,
+.app-card__links a:focus-visible {
+  color: #ffffff;
+  background: var(--accent);
+  outline: 2px solid transparent;
 }
 
 .site-footer {
@@ -244,7 +271,7 @@ h1 {
     padding-bottom: 26px;
   }
 
-  .policy-index {
+  .app-index {
     grid-template-columns: 1fr;
   }
 
