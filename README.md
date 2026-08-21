@@ -1,35 +1,31 @@
 # Privacy Policy Pages
 
-一个用于托管多个 App 隐私政策的纯静态 GitLab Pages 项目。
+用于托管多个 App 隐私政策的纯 HTML 静态网站，作为 Apple App Store Connect 的 Privacy Policy URL。
 
-## 目录
+## 公网地址
 
-- `public/index.html`：政策总目录。
-- `public/privacy.html`：首个 App 的可配置占位政策。
-- `public/apps/<app-slug>/privacy.html`：后续 App 的独立政策路径。
-- `public/assets/privacy.css`：所有政策页面共享的响应式样式。
-- `.gitlab-ci.yml`：默认分支提交后自动发布 GitLab Pages。
+- 政策目录：https://andyhub001.github.io/privacy-policy/
+- 占位政策：https://andyhub001.github.io/privacy-policy/privacy.html
 
-## 完善首个政策
+## 文件结构
 
-在 `public/privacy.html` 中搜索以下占位符并替换：
+- `index.html`：隐私政策目录。
+- `privacy.html`：首个 App 的可配置占位政策。
+- `assets/privacy.css`：响应式页面样式。
+- `404.html`：无效地址提示页。
 
-- `[App 名称待填写]`
+## 完善政策
+
+在 `privacy.html` 中搜索并替换以下占位内容：
+
+- `XXX App`
 - `[开发者名称待填写]`
 - `[联系邮箱待填写]`
 - `[生效日期待填写]`
-- `[SDK 使用情况待确认]`
-- `[数据与权限使用情况待确认]`
+- SDK、数据处理和设备权限说明
 
-修改后提交到默认分支，GitLab CI/CD 会自动重新发布。
+## 增加其他 App
 
-## 新增其他 App
+可创建 `apps/<app-slug>/privacy.html`，并在 `index.html` 添加入口。每个 App 使用独立且稳定的 HTTPS 地址。
 
-复制 `public/privacy.html` 到：
-
-```text
-public/apps/<app-slug>/privacy.html
-```
-
-替换占位内容，并在 `public/index.html` 中增加对应入口。每个 App 使用独立、稳定的 HTTPS 地址。
-
+GitHub Pages 从 `main` 分支根目录自动发布，不需要后端、数据库或自定义域名。
