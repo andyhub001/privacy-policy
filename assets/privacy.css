@@ -1,0 +1,276 @@
+:root {
+  color-scheme: light;
+  --ink: #2d2630;
+  --muted: #706771;
+  --accent: #b34f72;
+  --accent-soft: #fbedf2;
+  --line: #eadde2;
+  --paper: #ffffff;
+  --page: #f7f5f6;
+  --notice: #fff8e8;
+  --notice-line: #e9c877;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--page);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  color: var(--ink);
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.72)),
+    var(--page);
+  font-size: 16px;
+  line-height: 1.82;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 3px;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.site-header__inner,
+.page-shell,
+.site-footer__inner {
+  width: calc(100% - 40px);
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.site-header__inner {
+  display: flex;
+  min-height: 68px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.brand__mark {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid #d88ca5;
+  color: var(--accent);
+  background: var(--accent-soft);
+  font-family: "Songti SC", STSong, serif;
+  transform: rotate(45deg);
+}
+
+.brand__mark > span {
+  transform: rotate(-45deg);
+}
+
+.header-link {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.page-shell {
+  padding: 54px 0 72px;
+}
+
+.policy-header {
+  padding-bottom: 34px;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Songti SC", STSong, serif;
+  font-size: clamp(30px, 5vw, 44px);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.policy-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.notice {
+  margin: 28px 0;
+  padding: 18px 20px;
+  border-left: 4px solid var(--notice-line);
+  background: var(--notice);
+}
+
+.notice strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.policy-section {
+  padding: 25px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.policy-section h2 {
+  margin: 0 0 10px;
+  font-size: 21px;
+  line-height: 1.5;
+}
+
+.policy-section p,
+.policy-section ul {
+  margin: 8px 0 0;
+}
+
+.policy-section ul {
+  padding-left: 1.35em;
+}
+
+.placeholder {
+  display: inline;
+  color: #8f5e20;
+  background: #fff1cd;
+  box-shadow: 0 0 0 3px #fff1cd;
+}
+
+.policy-index {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.policy-card {
+  display: block;
+  min-height: 150px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  background: var(--paper);
+  text-decoration: none;
+}
+
+.policy-card:hover,
+.policy-card:focus-visible {
+  border-color: #d88ca5;
+  outline: 2px solid transparent;
+  box-shadow: 0 8px 24px rgba(81, 53, 63, 0.08);
+}
+
+.policy-card__category {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.policy-card h2 {
+  margin: 10px 0 5px;
+  font-size: 20px;
+}
+
+.policy-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  background: var(--paper);
+  font-size: 13px;
+}
+
+.site-footer__inner {
+  display: flex;
+  min-height: 72px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 15px;
+    line-height: 1.76;
+  }
+
+  .site-header__inner,
+  .page-shell,
+  .site-footer__inner {
+    width: calc(100% - 28px);
+  }
+
+  .site-header__inner {
+    min-height: 60px;
+  }
+
+  .page-shell {
+    padding: 36px 0 52px;
+  }
+
+  .policy-header {
+    padding-bottom: 26px;
+  }
+
+  .policy-index {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer__inner {
+    min-height: 82px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+    text-align: center;
+  }
+}
+
+@media print {
+  .site-header,
+  .site-footer,
+  .notice {
+    display: none;
+  }
+
+  .page-shell {
+    width: 100%;
+    padding: 0;
+  }
+
+  body {
+    color: #000000;
+    background: #ffffff;
+  }
+}
