@@ -15,7 +15,6 @@
 - `public/flying-flower/support.html`：飞花令 App 的公开支持页面。
 - `public/<app-slug>/privacy.html`：其他 App 的独立政策路径。
 - `public/<app-slug>/support.html`：其他 App 的独立支持路径。
-- `public/privacy.html`、`public/support.html`：旧地址兼容跳转。
 - `public/assets/privacy.css`：所有政策页面共享的响应式样式。
 - GitHub 仓库根目录保留线上发布副本，提交后自动发布 GitHub Pages。
 
